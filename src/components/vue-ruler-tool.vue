@@ -190,8 +190,9 @@ export default {
       this.setSpacing()
     }, // 获取窗口宽与高
     setSpacing () {
-      this.topSpacing = this.$refs.horizontalRuler.getBoundingClientRect().y //.offsetParent.offsetTop
-      this.leftSpacing = this.$refs.verticalRuler.getBoundingClientRect().x// .offsetParent.offsetLeft
+      console.log(this.$refs.horizontalRuler.offsetParent.offsetTop);
+      this.topSpacing = this.$refs.horizontalRuler.offsetParent.offsetTop
+      this.leftSpacing = this.$refs.verticalRuler.offsetParent.offsetLeft
     },
     scaleCalc () {
       this.getCalc(this.xScale, this.width || this.windowWidth)
@@ -243,6 +244,7 @@ export default {
       }
     }, // 虚线移动
     dottedLineUp ($event) {
+      debugger
       this.setSpacing()
       if (this.isDrag) {
         this.isDrag = false
