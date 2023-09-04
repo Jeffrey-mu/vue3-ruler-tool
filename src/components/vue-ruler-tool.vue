@@ -190,7 +190,6 @@ export default {
       this.setSpacing()
     }, // 获取窗口宽与高
     setSpacing () {
-      console.log(this.$refs.horizontalRuler.offsetParent.offsetTop);
       this.topSpacing = this.$refs.horizontalRuler.offsetParent.offsetTop
       this.leftSpacing = this.$refs.verticalRuler.offsetParent.offsetLeft
     },
@@ -244,7 +243,6 @@ export default {
       }
     }, // 虚线移动
     dottedLineUp ($event) {
-      debugger
       this.setSpacing()
       if (this.isDrag) {
         this.isDrag = false
